@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<ServerSettings>
+    <property name="ServerName" value="Your Server Name Goes Here"/>
+    <property name="ServerDescription" value="Your Server Description Goes Here"/>
+    <property name="ServerPort" value="26900"/>
+    <property name="ServerVisibility" value="2"/>
+    <property name="ServerPassword" value=""/>
+    <property name="ServerMaxPlayerCount" value="32"/>
+
+    <property name="GameWorld" value="Navezgane"/>
+    <property name="GameDifficulty" value="2"/>
+    <property name="DayNightLength" value="60"/>
+
+    <property name="WebDashboardEnabled" value="true"/>
+    <property name="WebDashboardPort" value="8080"/>
+</ServerSettings>
