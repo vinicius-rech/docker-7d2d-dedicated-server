@@ -1,16 +1,118 @@
-<?xml version="1.0"?>
+<?xml version="1.0" ?>
 <ServerSettings>
-    <property name="ServerName" value="Your Server Name Goes Here"/>
-    <property name="ServerDescription" value="Your Server Description Goes Here"/>
-    <property name="ServerPort" value="26900"/>
-    <property name="ServerVisibility" value="2"/>
-    <property name="ServerPassword" value=""/>
-    <property name="ServerMaxPlayerCount" value="32"/>
 
-    <property name="GameWorld" value="Navezgane"/>
-    <property name="GameDifficulty" value="2"/>
-    <property name="DayNightLength" value="60"/>
+    <!-- Nome exibido na lista de servidores -->
+    <property name="ServerName" value="[PVE][LATAM] 7D2D SERVER 24/7" />
 
-    <property name="WebDashboardEnabled" value="true"/>
-    <property name="WebDashboardPort" value="8080"/>
+    <!-- Descrição do servidor, visível na lista -->
+    <property
+        name="ServerDescription"
+        value="Rules: Be nice, respect others, have fun."
+    />
+
+    <!-- Porta principal do servidor (padrão: 26900) -->
+    <property name="ServerPort" value="26900" />
+
+    <!-- 0 = Somente LAN, 1 = Privado, 2 = Público -->
+    <property name="ServerVisibility" value="2" />
+
+    <!-- Senha para entrar no servidor (vazio = sem senha) -->
+    <property name="ServerPassword" value="" />
+
+    <!-- Máximo de jogadores simultâneos -->
+    <property name="ServerMaxPlayerCount" value="16" />
+
+    <!-- Tipo de mundo: Navezgane ou RWG (Random World Generation) -->
+    <property name="GameWorld" value="RWG" />
+
+    <!-- Tamanho do mundo RWG em blocos (4096 / 6144 / 8192 padrão) -->
+    <property name="WorldGenSize" value="8192" />
+
+    <!-- Seed para gerar o mundo aleatório -->
+    <property name="WorldGenSeed" value="notdayz" />
+
+    <!-- Dificuldade: 0 = Novice, 1 = Adventure, 2 = Scavenger, 3 = Warrior, 4 = Survivalist, 5 = Insane -->
+    <property name="GameDifficulty" value="2" />
+
+    <!-- Duração do ciclo dia/noite em minutos -->
+    <property name="DayNightLength" value="60" />
+
+    <!-- Mantém o inventário e XP dos jogadores mesmo após reconectar -->
+    <property name="PersistentPlayerProfiles" value="true" />
+
+    <!-- Permissão mínima necessária para usar slots reservados -->
+    <property name="ServerReservedSlotsPermission" value="100" />
+
+    <!-- Número de vagas reservadas para administradores -->
+    <property name="ServerAdminSlots" value="1" />
+
+    <!-- Região do servidor (apenas informativa) -->
+    <property name="Region" value="SouthAmerica" />
+
+    <!-- Permite criar blocos no modo criativo: true/false -->
+    <property name="BuildCreate" value="false" />
+
+    <!-- O que o player perde ao morrer:
+         0 = Nada
+         1 = Equipment only (equipados)
+         2 = Backpack only
+         3 = Everything
+    -->
+    <property name="DropOnDeath" value="3" />
+
+    <!-- Modificador de durabilidade do claim online (0 = infinito / sem dano) -->
+    <property name="LandClaimOnlineDurabilityModifier" value="0" />
+
+    <!-- Tamanho do bloco de claim (padrão: 41 / 51 / 71 / 81) -->
+    <property name="LandClaimSize" value="71" />
+
+    <!-- Modo PvP:
+         Off, KillStrangersOnly, KillAll, NoKilling
+    -->
+    <property name="PlayerKillingMode" value="NoKilling" />
+
+    <!-- Quantidade máxima global de zumbis no mapa -->
+    <property name="MaxSpawnedZombies" value="64" />
+
+    <!-- Ativa o painel web (dashboard) -->
+    <property name="WebDashboardEnabled" value="true" />
+
+    <!-- Porta do painel web -->
+    <property name="WebDashboardPort" value="8080" />
+
+    <!-- Ativa o telnet remoto -->
+    <property name="TelnetEnabled" value="false" />
+
+    <!-- Quantidade máxima de animais no mundo -->
+    <property name="MaxSpawnedAnimals" value="50" />
+
+    <!-- Distância máxima de visão permitida para os jogadores (padrão 12–18) -->
+    <property name="ServerMaxAllowedViewDistance" value="12" />
+
+    <!-- Movimento dos zumbis durante o dia:
+         0 = Walk
+         1 = Jog
+         2 = Run
+         3 = Sprint
+         4 = Nightmare
+    -->
+	<property name="ZombieMove" value="0" />
+
+    <!-- Sentido de faro dos zumbis:
+         0 = Off
+         1 = Day
+         2 = Night
+         3 = All
+    -->
+	<property name="ZombieFeralSense" value="2" />
+
+	<!-- Velocidade dos zumbis à noite -->
+	<property name="ZombieMoveNight" value="4" />
+
+    <!-- Velocidade dos zumbis ferais -->
+	<property name="ZombieFeralMove" value="0" />
+
+    <!-- Velocidade de Blood Moon (horda de lua vermelha) -->
+	<property name="ZombieBMMove" value="4" />
+
 </ServerSettings>

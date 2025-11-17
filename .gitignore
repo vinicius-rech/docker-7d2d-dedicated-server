@@ -28,7 +28,7 @@ loki-data/
 
 # 7 Days to Die dedicated server files
 server/7d2d/*
-!server/7d2d/Saves/
+!server/7d2d/Saves
 !server/7d2d/Saves/**
 !server/7d2d/Mods/
 !server/7d2d/Mods/**
