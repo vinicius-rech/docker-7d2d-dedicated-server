@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<Name value="LandClaimAreaProtection" />
+	<DisplayName value="LandClaimAreaProtection" />
+	<Description value="LandClaimAreaProtection" />
+	<Author value="llmonmonll" />
+	<Version value="2.4.6" />
+	<Website value="" />
+	<SkipWithAntiCheat value="true" />
+</xml>

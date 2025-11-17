@@ -5,9 +5,49 @@ SERVER_DIR=/server/7d2d
 CONFIG_FILE="$SERVER_DIR/serverconfig.xml"
 STEAM_SDK_DIR=/root/.steam/sdk64
 STEAM_CLIENT_SRC="$SERVER_DIR/steamclient.so"
+CONTAINER_LOCAL_SHARE=/root/.local/share/7DaysToDie
+PERSISTENT_LOCAL_SHARE="$SERVER_DIR/.local/share/7DaysToDie"
 
 mkdir -p "$SERVER_DIR"
 mkdir -p "$STEAM_SDK_DIR"
+
+ensure_persistent_saves() {
+    mkdir -p "$PERSISTENT_LOCAL_SHARE"
+    mkdir -p "$(dirname "$CONTAINER_LOCAL_SHARE")"
+
+    if [ ! -L "$CONTAINER_LOCAL_SHARE" ]; then
+        if [ -d "$CONTAINER_LOCAL_SHARE" ] && [ "$(ls -A "$CONTAINER_LOCAL_SHARE")" ]; then
+            cp -a "$CONTAINER_LOCAL_SHARE/." "$PERSISTENT_LOCAL_SHARE/"
+        fi
+
+        rm -rf "$CONTAINER_LOCAL_SHARE"
+        ln -s "$PERSISTENT_LOCAL_SHARE" "$CONTAINER_LOCAL_SHARE"
+    fi
+
+    mkdir -p "$PERSISTENT_LOCAL_SHARE/Saves"
+    local saves_target=".local/share/7DaysToDie/Saves"
+
+    if [ -d "$SERVER_DIR/Saves" ] && [ ! -L "$SERVER_DIR/Saves" ]; then
+        if [ "$(ls -A "$SERVER_DIR/Saves")" ]; then
+            cp -a "$SERVER_DIR/Saves/." "$PERSISTENT_LOCAL_SHARE/Saves/"
+        fi
+        rm -rf "$SERVER_DIR/Saves"
+    elif [ -e "$SERVER_DIR/Saves" ] && [ ! -L "$SERVER_DIR/Saves" ]; then
+        mv "$SERVER_DIR/Saves" "$PERSISTENT_LOCAL_SHARE/Saves"
+    fi
+
+    if [ -L "$SERVER_DIR/Saves" ]; then
+        local current_target
+        current_target="$(readlink "$SERVER_DIR/Saves")"
+        if [ "$current_target" != "$saves_target" ]; then
+            rm "$SERVER_DIR/Saves"
+        fi
+    fi
+
+    if [ ! -L "$SERVER_DIR/Saves" ]; then
+        ln -s "$saves_target" "$SERVER_DIR/Saves"
+    fi
+}
 
 link_steamclient() {
     if [ -f "$STEAM_CLIENT_SRC" ]; then
@@ -37,6 +77,7 @@ else
     echo "=== Server files detected; skipping SteamCMD update ==="
 fi
 
+ensure_persistent_saves
 link_steamclient
 export SteamAppId=251570
 

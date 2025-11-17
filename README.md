@@ -47,7 +47,7 @@ docker compose up -d
 docker compose logs -f 7d2d
 ```
 
-First startup downloads the full dedicated server through SteamCMD and may take several minutes. Game saves, mods, and logs remain in `server/7d2d` so subsequent container recreations reuse your data.
+First startup downloads the full dedicated server through SteamCMD and may take several minutes. `startserver.sh` symlinks the default `~/.local/share/7DaysToDie` data directory into `server/7d2d`, so game saves, mods, and logs remain on the host and survive container rebuilds/recreations.
 
 ### Stopping and removing containers
 
@@ -60,7 +60,7 @@ Adding `-v` to the command would also drop the named Docker volumes used by Loki
 ## Mods, Saves, and Logs
 
 - Place Mods inside `server/7d2d/Mods/`.
-- Game worlds and player data live under `server/7d2d/Saves/`.
+- Game worlds and player data live under `server/7d2d/Saves/` (which maps to the server's `~/.local/share/7DaysToDie/Saves` path).
 - Runtime logs are written to `server/7d2d/logs/` and are shipped to Loki via Promtail automatically.
 
 Because the whole `server/7d2d` directory is bind-mounted, you can back it up or edit files from the host at any time.

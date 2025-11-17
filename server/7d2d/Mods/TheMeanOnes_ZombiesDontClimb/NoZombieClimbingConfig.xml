@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <property name="WhitelistClimbing" value="true" />
+  <!--When set to true, only zombies listed below will be allowed to climb ladders. If false, climbing is not restricted and all zombies can climb normally. So if you want NO zombies climbing, remove everything in the AllowList and set WhitelistClimbing to true.-->
+  <property name="AllowList" value=" ">
+    <!--Add more zombie entity class names separated by commas. Example: zombieSpider,zombieSteve,zombieSoldier-->
+  </property>
+  <!--
+============================================================================
+Below is a comprehensive list of all unique zombie types defined in this mod's
+entity groups. These are commented out to avoid affecting the XML structure but
+are included for reference and use in the AllowList configuration. Each zombie
+type represents a variant that can be whitelisted to allow ladder climbing.
+To use, uncomment and copy any name into the AllowList above, separating
+entries with commas (e.g., zombieBoe,zombieJoeFeral).
+============================================================================
+-->
+  <!--<!- - zombieBoe - ->-->
+  <!--<!- - zombieBoeFeral - ->-->
+  <!--<!- - zombieBoeRadiated - ->-->
+  <!--<!- - zombieBoeCharged - ->-->
+  <!--<!- - zombieBoeInfernal - ->-->
+  <!--<!- - zombieJoe - ->-->
+  <!--<!- - zombieJoeFeral - ->-->
+  <!--<!- - zombieJoeRadiated - ->-->
+  <!--<!- - zombieJoeCharged - ->-->
+  <!--<!- - zombieSteve - ->-->
+  <!--<!- - zombieSteveFeral - ->-->
+  <!--<!- - zombieSteveRadiated - ->-->
+  <!--<!- - zombieSteveCharged - ->-->
+  <!--<!- - zombieTomClark - ->-->
+  <!--<!- - zombieTomClarkFeral - ->-->
+  <!--<!- - zombieTomClarkRadiated - ->-->
+  <!--<!- - zombieTomClarkCharged - ->-->
+  <!--<!- - zombieMoe - ->-->
+  <!--<!- - zombieMoeFeral - ->-->
+  <!--<!- - zombieMoeRadiated - ->-->
+  <!--<!- - zombieMoeInfernal - ->-->
+  <!--<!- - zombieYo - ->-->
+  <!--<!- - zombieYoFeral - ->-->
+  <!--<!- - zombieYoRadiated - ->-->
+  <!--<!- - zombieYoCharged - ->-->
+  <!--<!- - zombieYoInfernal - ->-->
+  <!--<!- - zombieBusinessMan - ->-->
+  <!--<!- - zombieBusinessManFeral - ->-->
+  <!--<!- - zombieBusinessManRadiated - ->-->
+  <!--<!- - zombieBusinessManCharged - ->-->
+  <!--<!- - zombieBusinessManInfernal - ->-->
+  <!--<!- - zombieArlene - ->-->
+  <!--<!- - zombieArleneFeral - ->-->
+  <!--<!- - zombieArleneRadiated - ->-->
+  <!--<!- - zombieArleneCharged - ->-->
+  <!--<!- - zombieDarlene - ->-->
+  <!--<!- - zombieDarleneFeral - ->-->
+  <!--<!- - zombieDarleneRadiated - ->-->
+  <!--<!- - zombieDarleneCharged - ->-->
+  <!--<!- - zombieDarleneInfernal - ->-->
+  <!--<!- - zombieMarlene - ->-->
+  <!--<!- - zombieMarleneFeral - ->-->
+  <!--<!- - zombieMarleneRadiated - ->-->
+  <!--<!- - zombieMarleneCharged - ->-->
+  <!--<!- - zombieSkateboarder - ->-->
+  <!--<!- - zombieSkateboarderFeral - ->-->
+  <!--<!- - zombieSkateboarderRadiated - ->-->
+  <!--<!- - zombieSkateboarderCharged - ->-->
+  <!--<!- - zombieSkateboarderInfernal - ->-->
+  <!--<!- - zombieBiker - ->-->
+  <!--<!- - zombieBikerFeral - ->-->
+  <!--<!- - zombieBikerRadiated - ->-->
+  <!--<!- - zombieBikerInfernal - ->-->
+  <!--<!- - zombiePartyGirl - ->-->
+  <!--<!- - zombiePartyGirlFeral - ->-->
+  <!--<!- - zombiePartyGirlRadiated - ->-->
+  <!--<!- - zombiePartyGirlCharged - ->-->
+  <!--<!- - zombieUtilityWorker - ->-->
+  <!--<!- - zombieUtilityWorkerFeral - ->-->
+  <!--<!- - zombieJanitor - ->-->
+  <!--<!- - zombieJanitorFeral - ->-->
+  <!--<!- - zombieJanitorRadiated - ->-->
+  <!--<!- - zombieJanitorCharged - ->-->
+  <!--<!- - zombieJanitorInfernal - ->-->
+  <!--<!- - zombieLumberjack - ->-->
+  <!--<!- - zombieLumberjackFeral - ->-->
+  <!--<!- - zombieLumberjackRadiated - ->-->
+  <!--<!- - zombieLumberjackInfernal - ->-->
+  <!--<!- - zombieNurse - ->-->
+  <!--<!- - zombieNurseFeral - ->-->
+  <!--<!- - zombieNurseRadiated - ->-->
+  <!--<!- - zombieNurseCharged - ->-->
+  <!--<!- - zombieSteveCrawler - ->-->
+  <!--<!- - zombieFatHawaiian - ->-->
+  <!--<!- - zombieFatHawaiianFeral - ->-->
+  <!--<!- - zombieFatHawaiianRadiated - ->-->
+  <!--<!- - zombieFatHawaiianInfernal - ->-->
+  <!--<!- - zombieBowler - ->-->
+  <!--<!- - zombieBowlerFeral - ->-->
+  <!--<!- - zombieSpider - ->-->
+  <!--<!- - zombieSpiderFeral - ->-->
+  <!--<!- - zombieSpiderRadiated - ->-->
+  <!--<!- - zombieFatCop - ->-->
+  <!--<!- - zombieFatCopFeral - ->-->
+  <!--<!- - zombieFatCopRadiated - ->-->
+  <!--<!- - zombieFatCopInfernal - ->-->
+  <!--<!- - zombieSoldier - ->-->
+  <!--<!- - zombieSoldierFeral - ->-->
+  <!--<!- - zombieSoldierRadiated - ->-->
+  <!--<!- - zombieSoldierInfernal - ->-->
+  <!--<!- - zombieWightFeral - ->-->
+  <!--<!- - zombieWightRadiated - ->-->
+  <!--<!- - zombieWightCharged - ->-->
+  <!--<!- - zombieWightInfernal - ->-->
+  <!--<!- - zombieDemolition - ->-->
+  <!--<!- - animalZombieDog - ->-->
+  <!--<!- - animalDireWolf - ->-->
+  <!--<!- - animalWolf - ->-->
+  <!--<!- - zombieMaleHazmat - ->-->
+  <!--<!- - zombieMaleHazmatRadiated - ->-->
+  <!--<!- - zombieMaleHazmatCharged - ->-->
+  <!--<!- - zombieMaleHazmatInfernal - ->-->
+  <!--<!- - zombieFemaleFat - ->-->
+  <!--<!- - zombieFemaleFatFeral - ->-->
+  <!--<!- - zombieFemaleFatRadiated - ->-->
+  <!--<!- - zombieFemaleFatInfernal - ->-->
+</config>

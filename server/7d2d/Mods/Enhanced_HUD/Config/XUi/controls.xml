@@ -1,0 +1,15 @@
+<Jakmeister999s-HUD>
+
+		<remove xpath="/controls/backpack_item_stack/rect/sprite[@name='iconSlotLock']"/>
+		<append xpath="/controls/backpack_item_stack/rect">
+			<sprite depth="15" name="iconSlotLock" width="20" height="20" sprite="ui_game_symbol_lock" pos="52, -14" style="icon32px" pivot="center" visible="{# defined('userlockmode') and !userlockmode and userlockedslot }" color="[lightGrey]" />
+			<sprite depth="2" name="iconSlotLock" width="70" height="70" sprite="menu_empty3px" pos="0,0" type="sliced" globalopacity="true" visible="{# userlockedslot and !userlockmode}" color="0,0,0,230" />
+		</append>
+		
+		<remove xpath="/controls/item_stack/rect/sprite[@name='iconSlotLock']"/>
+		<append xpath="/controls/item_stack/rect">
+			<sprite depth="15" name="iconSlotLock" width="20" height="20" sprite="ui_game_symbol_lock" pos="60, -14" style="icon32px" pivot="center" visible="{# defined('userlockmode') and !userlockmode and userlockedslot }" color="[lightGrey]" />
+			<sprite depth="2" name="iconSlotLock" width="70" height="70" sprite="menu_empty3px" pos="0,0" type="sliced" globalopacity="true" visible="{# userlockedslot and !userlockmode}" color="0,0,0,230" />
+		</append>
+
+</Jakmeister999s-HUD>
